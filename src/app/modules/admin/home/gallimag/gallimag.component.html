@@ -1,0 +1,30 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+  <div class="panel-heading">
+    <h2>Image</h2>
+    <div class="panel-ctrls" data-actions-container=""
+      data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+          class="ti ti-angle-down"></i></span></div>
+
+  </div>
+  <button class="btn btn-primary" style="margin-top: 10px;" [routerLink]="['/admin/gallimage/add']">Add Image</button>
+  <div class="panel-body no-padding" style="display: block;">
+    <table class="table table-responsive" *ngIf="loaded">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Image</th>
+          <th>Image likn</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nav of NavList">
+          <td>{{ nav.name }}</td>
+          <td><img src="{{nav.image_link}}" width="100px"></td>
+          <td>{{ nav.image_link }}</td>
+          <td><button class="btn btn-primary" (click)="copyText(nav.image_link)">COPY IMAGE</button><button class="btn btn-danger" (click)="deleteImage(nav.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

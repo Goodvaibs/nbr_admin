@@ -1,0 +1,98 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+  <div class="panel-heading">
+    <h2>ADD SUBNAVBAR</h2>
+    <div class="panel-ctrls" data-actions-container=""
+      data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+          class="ti ti-angle-down"></i></span></div>
+  </div>
+  <div class="panel-body no-padding" style="display: block;margin-top: 50px;" *ngIf="loading">
+    <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+      <div class="col-md-12 div-height">
+        <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.name.errors }">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <span class="input-group-addon">
+                <i class="fa fa-envelope-o"></i>
+              </span>
+              <input id="name" class="form-control1" type="text" placeholder="Navbar Name" formControlName="name">
+            </div>
+          </div>
+          <div class="col-sm-12" *ngIf="submitted && f.name.errors">
+            <p class="help-block" *ngIf="f.name.errors.required">Navbar name is required</p>
+          </div>
+        </div>
+        <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.url.errors }">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <span class="input-group-addon">
+                <i class="fa fa-key"></i>
+              </span>
+              <input type="text" id="description" class="form-control1" placeholder="url (example:- /home)" formControlName="url">
+            </div>
+          </div>
+          <div class="col-sm-12" *ngIf="submitted && f.url.errors">
+            <p class="help-block" *ngIf="f.url.errors.required">Url is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 div-height">
+        <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.sort_order.errors }">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <span class="input-group-addon">
+                <i class="fa fa-key"></i>
+              </span>
+              <input type="number" id="description" class="form-control1" placeholder="Sort order" formControlName="sort_order">
+            </div>
+          </div>
+          <div class="col-sm-12" *ngIf="submitted && f.sort_order.errors">
+            <p class="help-block" *ngIf="f.sort_order.errors.required">Sort Order is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 div-height">
+        <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.is_static.errors }">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <select formControlName="is_static" class="form-control1">
+                <option value="">Select page type</option>
+                <option value="1">Static</option>
+                <option value="0">Dynamic</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12" *ngIf="submitted && f.is_static.errors">
+            <p class="help-block" *ngIf="f.is_static.errors.required">Page Type is required</p>
+          </div>
+        </div>
+        <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.in_footer.errors }">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <select formControlName="in_footer" class="form-control1">
+                <option value="">Footer status</option>
+                <option value="1">True</option>
+                <option value="0">False</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12" *ngIf="submitted && f.in_footer.errors">
+            <p class="help-block" *ngIf="f.in_footer.errors.required">Footeris required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="form-group col-md-6">
+          <div class="col-md-12">
+            <div class="input-group input-icon right">
+              <div class="col-sm-8 col-sm-offset-2">
+                <button class="btn-success btn" type="submit">Submit</button>
+                <button class="btn-inverse btn">Reset</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

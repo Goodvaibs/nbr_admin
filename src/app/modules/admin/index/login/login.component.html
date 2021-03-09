@@ -1,0 +1,38 @@
+<div class="login-logo">
+    <a href="index.html"><img src="../../../../../assets/images/logo11.png" alt="" width="300px" /></a>
+</div>
+<h2 class="form-heading">Admin login</h2>
+<div class="app-cam">
+    <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+        <input type="text" class="text" formControlName="username" placeholder="*Enter username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }">
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback valid-error">
+            <div *ngIf="f.username.errors.required">*Username is required</div>
+        </div>
+        <input type="password" formControlName="password" placeholder="*Enter Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback valid-error">
+            <div *ngIf="f.password.errors.required">*Password is required</div>
+        </div>
+        <div class="submit"><input type="submit" value="Login"></div>
+        <div class="login-social-link">
+            <a href="index.html" class="facebook">
+                Facebook
+            </a>
+            <a href="index.html" class="twitter">
+                Twitter
+            </a>
+        </div>
+        <ul class="new">
+            <li class="new_left">
+                <p><a href="#">Forgot Password ?</a></p>
+            </li>
+            <li class="new_right">
+                <p class="sign">New here ?<a href="register.html"> Sign Up</a></p>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </form>
+</div>
+<!-- <div class="copy_layout login">
+    <p>Copyright &copy; 2020 Modern. All Rights Reserved | Design by <a href="#"
+            target="_blank">F.R.I.E.N.D.S</a> </p>
+</div> -->

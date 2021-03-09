@@ -1,0 +1,106 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+  <div class="panel-heading">
+      <h2>Update News</h2>
+      <div class="panel-ctrls" data-actions-container=""
+          data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+                  class="ti ti-angle-down"></i></span></div>
+  </div>
+  <div class="panel-body no-padding" style="display: block;margin-top: 50px;" *ngIf="loading">
+      <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+          <div class="col-md-12 div-height">
+              <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.title.errors }">
+                  <div class="col-md-12">
+                      <div class="input-group input-icon right">
+                          <span class="input-group-addon">
+                              <i class="fa fa-envelope-o"></i>
+                          </span>
+                          <input id="title" class="form-control1" type="text" placeholder="Title"
+                              formControlName="title">
+                      </div>
+                  </div>
+                  <div class="col-sm-12" *ngIf="submitted && f.title.errors">
+                      <p class="help-block" *ngIf="f.title.errors.required">Title is required</p>
+                  </div>
+              </div>
+              <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.subtitle.errors }">
+                  <div class="col-md-12">
+                      <div class="input-group input-icon right">
+                          <span class="input-group-addon">
+                              <i class="fa fa-key"></i>
+                          </span>
+                          <input id="title" class="form-control1" type="text" placeholder="SubTitle"
+                              formControlName="subtitle">
+                      </div>
+                  </div>
+                  <div class="col-sm-12" *ngIf="submitted && f.subtitle.errors">
+                      <p class="help-block" *ngIf="f.subtitle.errors.required">Sub title is required</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 div-height">
+            <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.publish_date.errors }">
+                <div class="col-md-12">
+                    <div class="input-group input-icon right">
+                        <span class="input-group-addon">
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <input id="title" class="form-control1" type="date" placeholder="Button url"
+                            formControlName="publish_date">
+                    </div>
+                </div>
+                <div class="col-sm-12" *ngIf="submitted && f.publish_date.errors">
+                    <p class="help-block" *ngIf="f.publish_date.errors.required">Date is required</p>
+                </div>
+            </div>
+            <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.author_name.errors }">
+              <div class="col-md-12">
+                  <div class="input-group input-icon right">
+                      <span class="input-group-addon">
+                          <i class="fa fa-envelope-o"></i>
+                      </span>
+                      <input id="title" class="form-control1" type="text" placeholder="Author Name"
+                          formControlName="author_name">
+                  </div>
+              </div>
+              <div class="col-sm-12" *ngIf="submitted && f.author_name.errors">
+                  <p class="help-block" *ngIf="f.author_name.errors.required">Author Name is required</p>
+              </div>
+          </div>
+          </div>
+          <div class="col-md-12 div-height">
+            <div class="form-group col-md-12" [ngClass]="{ 'has-error': submitted && f.cover_image.errors }">
+              <div class="col-md-12">
+                  <div class="input-group input-icon right">
+                    <label>Title Image</label>
+                      <input type="file" formControlName="cover_image" class="form-control1" placeholder="title image" #image (change)="fileUpload($event)">
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+              <div class="form-group col-md-12" [ngClass]="{ 'has-error': submitted && f.body.errors }">
+                  <div class="col-md-12">
+                      <div class="input-group input-icon right">
+                          <ckeditor formControlName="body" [config]="ckEditorConfig"></ckeditor>
+                      </div>
+                  </div>
+                  <div class="col-sm-12" *ngIf="submitted && f.body.errors">
+                      <p class="help-block" *ngIf="f.body.errors.required">Body is required!</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12 div-height">
+              <div class="form-group col-md-6">
+                  <div class="col-md-12">
+                      <div class="input-group input-icon right">
+                          <div class="col-sm-8 col-sm-offset-2">
+                              <button class="btn-success btn" type="submit">Submit</button>
+                              <button class="btn-inverse btn">Reset</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>

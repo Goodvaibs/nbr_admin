@@ -1,0 +1,28 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+  <div class="panel-heading">
+    <h2>Navbar</h2>
+    <div class="panel-ctrls" data-actions-container=""
+      data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+          class="ti ti-angle-down"></i></span></div>
+
+  </div>
+  <button class="btn btn-primary" style="margin-top: 10px;" [routerLink]="['/admin/category/add']">Add Category</button>
+  <div class="panel-body no-padding" style="display: block;">
+    <table class="table table-responsive" *ngIf="loaded">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Active</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nav of NavList">
+          <td>{{ nav.name }}</td>
+          <td>{{ nav.is_active }}</td>
+          <td><button class="btn btn-primary" [routerLink]="['/admin/subcategory/list/', nav.id]">View Record</button><button class="btn btn-primary" [routerLink]="['/admin/subcategory/list/', nav.id]">SubCategory</button><button class="btn btn-warning" [routerLink]="['/admin/category/edit', nav.id]">Edit</button><button class="btn btn-danger" (click)="deleteNav(nav.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.panel-warning{
+  margin-top: 0 !important;
+  padding: 30px;
+  border: none !important;
+}
+
+.btn {
+  padding: 8px 12px !important;
+  margin-right: 10px;
+}
+
+.div-height {
+  height: 150px;
+}

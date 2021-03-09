@@ -1,0 +1,49 @@
+<div class="widget_5" *ngIf="loaded">
+    <div class="col-md-12 widget_1_box2">
+        <div class="wid_blog">
+            <h1>{{userData.first_name | uppercase }} {{userData?.middle_name | uppercase }} {{userData.last_name | uppercase }}</h1>
+        </div>
+        <div class="wid_blog-desc">
+            <div class="wid_blog-left">
+                <img src="{{userData.profile_image}}" class="img-responsive" alt="no image" onerror="this.onerror=null;this.src='assets/images/user.png';">
+                <!-- <img src="assets/images/user.png" class="img-responsive" alt=""> -->
+            </div>
+            <!-- <div class="wid_blog-right">
+                <h2>Lorem Ipsum</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout</p>
+                <ul class="list-unstyled list-inline">
+                    <li><a href="#" class="text-muted">12<sup>th</sup> March, 2015</a></li>
+                    <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                    <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+                    <li><a href="#" class="text-muted">More</a></li>
+                </ul>
+            </div> -->
+            <div class="wid_blog-right">
+                <div class="list-group list-group-alternate"> 
+                    <a class="list-group-item" *ngIf="userData.name != null"><i class="fa fa-user"></i> {{userData?.name}} </a> 
+                    <a class="list-group-item" *ngIf="userData.email != null"><i class="fa fa-envelope"></i> {{userData?.email}} </a> 
+                    <a class="list-group-item" *ngIf="userData.mobile != null"><i class="fa fa-phone"></i> {{ userData?.mobile }} </a> 
+                    <a class="list-group-item" *ngIf="userData.gender != null"><i class="fa fa-user"></i> {{ userData?.gender }} </a> 
+                    <a class="list-group-item" *ngIf="userData.dob != null"><i class="fa fa-calendar"></i> {{ userData?.dob }} </a> 
+                    <a class="list-group-item" *ngIf="userData.country != null"><i class="fa fa-flag"></i> {{ userData?.country }} ({{userData?.state}}) </a> 
+                </div>
+             </div>
+             <div class="wid_blog-right">
+                <!-- <h2>Lorem Ipsum</h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout</p> -->
+                <ul class="list-unstyled list-inline">
+                    <li>Joined on :-<a href="#" class="text-muted"> {{ userData?.created_at | date: 'medium'}} </a></li>
+                    <!-- <li><a href="#" class="text-muted"><i class="fa fa-comment"></i> 584</a></li>
+                    <li><a href="#" class="text-orange"><i class="fa fa-heart"></i> 12k</a></li>
+                    <li><a href="#" class="text-muted">More</a></li> -->
+                </ul>
+                <button class="btn btn-warning" *ngIf="userData.status == 3" (click)="changeStatus( userData.user_id,'block')"><i class="fa fa-check"></i>Unblock</button>
+                <button class="btn btn-danger" *ngIf="userData.status == 1 || userData.status == 4" (click)="changeStatus(userData.user_id, 'unblock')"><i class="fa fa-times"></i> Block</button>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+</div>

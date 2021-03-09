@@ -1,0 +1,145 @@
+<link href="http://localhost:4200/assets/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="screen" rel="stylesheet" />
+<link href="http://localhost:4200/assets/user/css/style.css" media="screen" rel="stylesheet" />
+<main class="main-info main-body-page">
+<div class="region area-1">
+<section class="py-5" style="color:black; background-color: white;">
+<div class="container">
+<div class="row h-100 ">
+<div class="col-sm-6 col-md-6 col-lg-6 abt-img "><img alt="adventure" src="http://localhost:4200/assets/user/images/records/records-title.jpg" /></div>
+
+<div class="col-sm-6 col-md-6 col-lg-6 abt-text text-left">
+<h1>Records</h1>
+
+<p>Welcome to the home of records, where you can explore mind-blowing feats and record-breaking wonders.</p>
+
+<p>Browse our online collection of record titles for awe-inspiring handpicked videos and photos in our curated galleries. As well as all of your favourite records - from talented pets and superhuman achievements to big stuff and extreme vehicles, you&rsquo;ll find show-stopping superlatives from brand-new categories.</p>
+
+<p>Read about our incredible record-holders and their stories, and get inspired to make an application for a record attempt yourself! You will find all the information you need to apply right here.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5">
+<div class="container">
+<div class="row h-100 ">
+<div class="col-sm-6 col-md-6 col-lg-6 abt-text text-left">
+<h1>Nigeria Book Records Day</h1>
+
+<p>Are you thinking of making a record application (either as an individual or in a small team) in the next few months? Well how about being a part of Nigeria Book Records&#39; biggest event of the year, GWR Day? Simply make your application and select the event &quot;GWR Day 2020&quot; when prompted, and join in the celebrations!</p>
+
+<div><a href="" target="_self"> </a>
+
+<p class="btn #df3b56"><a href="" target="_self">How to join in</a></p>
+<a href="" target="_self"> </a></div>
+</div>
+
+<div class="col-sm-6 col-md-6 col-lg-6 abt-img "><img alt="adventure" src="http://localhost:4200/assets/user/images/records/nbr-day.jpg" style="width:125vh;height:70vh" /></div>
+</div>
+</div>
+</section>
+
+<section class="py-5" style="background-color: whitesmoke;">
+<div class="container">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+<div class="col mb-4">
+<div class="card record-app-process1"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/meru-hf.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Hall Of Fame</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process1"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/Watermelon-head.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Apply to set or break record</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process1"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/Record-showcase-tile.png" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Records showcase</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-5" style="background-color: whitesmoke">
+<div class="container">
+<h2>Find out more</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/nbr-title.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">What makes a Nigeria Book Records Title?</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/hw-to-break-nbr-title.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">How to break a Nigeria Book Records Title</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/app-process.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">The Application Process</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/nbr-guidelines.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Understanding Guidelines</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/collect-evidence.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">How to collect and submit evidence</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/search.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Record application search</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/faqs.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Record FAQ&#39;s</h3>
+</div>
+</div>
+</div>
+
+<div class="col mb-4">
+<div class="card record-app-process"><img alt="..." class="card-img-top" src="http://localhost:4200/assets/user/images/records/record-policies.jpg" />
+<div class="card-body" style="color:black;">
+<h3 class="card-title">Record Policies</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>

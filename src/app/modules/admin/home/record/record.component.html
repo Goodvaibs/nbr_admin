@@ -1,0 +1,32 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+  <div class="panel-heading">
+    <h2>SubNavbar</h2>
+    <div class="panel-ctrls" data-actions-container=""
+      data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+          class="ti ti-angle-down"></i></span></div>
+
+  </div>
+  <button class="btn btn-primary" style="margin-top: 10px;" [routerLink]="['/admin/record/add/', record_id]">Add Record</button>
+  <div class="panel-body no-padding" style="display: block;">
+    <table class="table table-responsive" *ngIf="loaded">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Mini title</th>
+          <th>Title</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nav of recordList">
+          <td>{{ nav.name }}</td>
+          <td>{{ nav.description }}</td>
+          <td>{{ nav.mini_title }}</td>
+          <td>{{ nav.title }}</td>
+          <td><button class="btn btn-warning" [routerLink]="['/admin/record/edit', nav.id, record_id]">Edit</button><button class="btn btn-danger" (click)="deleteNav(nav.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

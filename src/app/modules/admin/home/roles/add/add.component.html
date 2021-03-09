@@ -1,0 +1,54 @@
+<div class="panel panel-warning" data-widget="{&quot;draggable&quot;: &quot;false&quot;}" data-widget-static="">
+    <div class="panel-heading">
+        <h2>Add Roles</h2>
+        <div class="panel-ctrls" data-actions-container=""
+            data-action-collapse="{&quot;target&quot;: &quot;.panel-body&quot;}"><span class="button-icon has-bg"><i
+                    class="ti ti-angle-down"></i></span></div>
+    </div>
+    <div class="panel-body no-padding" style="display: block;margin-top: 50px;" *ngIf="loading">
+        <form [formGroup]="Form" (ngSubmit)="onSubmit()">
+            <div class="col-md-12 div-height">
+                <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.name.errors }">
+                    <div class="col-md-12">
+                        <div class="input-group input-icon right">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                            <input id="name" class="form-control1" type="text" placeholder="Role Name"
+                                formControlName="name">
+                        </div>
+                    </div>
+                    <div class="col-sm-12" *ngIf="submitted && f.name.errors">
+                        <p class="help-block" *ngIf="f.name.errors.required">Role name is required</p>
+                    </div>
+                </div>
+                <div class="form-group col-md-6" [ngClass]="{ 'has-error': submitted && f.description.errors }">
+                    <div class="col-md-12">
+                        <div class="input-group input-icon right">
+                            <span class="input-group-addon">
+                                <i class="fa fa-key"></i>
+                            </span>
+                            <textarea id="description" class="form-control1" placeholder="Description"
+                            formControlName="description" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" *ngIf="submitted && f.description.errors">
+                        <p class="help-block" *ngIf="f.description.errors.required">Description is required</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group col-md-6">
+                    <div class="col-md-12">
+                        <div class="input-group input-icon right">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <button class="btn-success btn" type="submit">Submit</button>
+                                <button class="btn-inverse btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
